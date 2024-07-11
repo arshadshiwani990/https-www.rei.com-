@@ -1,0 +1,340 @@
+[
+    {
+        "label": "scrapy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "signals",
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "isExtraImport": true,
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "is_item",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "ItemAdapter",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "ItemAdapter",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "ReiSpiderSpider",
+        "kind": 6,
+        "importPath": "rei.spiders.rei_spider",
+        "description": "rei.spiders.rei_spider",
+        "peekOfCode": "class ReiSpiderSpider(scrapy.Spider):\n    name = 'rei_spider'\n    custom_settings = {\n\t\t'FEEDS': {\n\t\t\t'rei.csv': {\n\t\t\t\t'format': 'csv',\n\t\t\t\t'encoding': 'utf-8-sig',\n\t\t\t\t'overwrite': True,\n\t\t\t},\n\t\t},",
+        "detail": "rei.spiders.rei_spider",
+        "documentation": {}
+    },
+    {
+        "label": "ReiItem",
+        "kind": 6,
+        "importPath": "rei.items",
+        "description": "rei.items",
+        "peekOfCode": "class ReiItem(scrapy.Item):\n    # define the fields for your item here like:\n    # name = scrapy.Field()\n    pass",
+        "detail": "rei.items",
+        "documentation": {}
+    },
+    {
+        "label": "ReiSpiderMiddleware",
+        "kind": 6,
+        "importPath": "rei.middlewares",
+        "description": "rei.middlewares",
+        "peekOfCode": "class ReiSpiderMiddleware:\n    # Not all methods need to be defined. If a method is not defined,\n    # scrapy acts as if the spider middleware does not modify the\n    # passed objects.\n    @classmethod\n    def from_crawler(cls, crawler):\n        # This method is used by Scrapy to create your spiders.\n        s = cls()\n        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)\n        return s",
+        "detail": "rei.middlewares",
+        "documentation": {}
+    },
+    {
+        "label": "ReiDownloaderMiddleware",
+        "kind": 6,
+        "importPath": "rei.middlewares",
+        "description": "rei.middlewares",
+        "peekOfCode": "class ReiDownloaderMiddleware:\n    # Not all methods need to be defined. If a method is not defined,\n    # scrapy acts as if the downloader middleware does not modify the\n    # passed objects.\n    @classmethod\n    def from_crawler(cls, crawler):\n        # This method is used by Scrapy to create your spiders.\n        s = cls()\n        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)\n        return s",
+        "detail": "rei.middlewares",
+        "documentation": {}
+    },
+    {
+        "label": "ReiPipeline",
+        "kind": 6,
+        "importPath": "rei.pipelines",
+        "description": "rei.pipelines",
+        "peekOfCode": "class ReiPipeline:\n    def process_item(self, item, spider):\n        return item",
+        "detail": "rei.pipelines",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_NAME",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "BOT_NAME = 'rei'\nSPIDER_MODULES = ['rei.spiders']\nNEWSPIDER_MODULE = 'rei.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'rei (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SPIDER_MODULES",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "SPIDER_MODULES = ['rei.spiders']\nNEWSPIDER_MODULE = 'rei.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'rei (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "NEWSPIDER_MODULE",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "NEWSPIDER_MODULE = 'rei.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'rei (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#USER_AGENT",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#USER_AGENT = 'rei (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROBOTSTXT_OBEY",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "ROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DOWNLOAD_DELAY",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS_PER_DOMAIN",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS_PER_IP",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#COOKIES_ENABLED",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#TELNETCONSOLE_ENABLED",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html\n#SPIDER_MIDDLEWARES = {\n#    'rei.middlewares.ReiSpiderMiddleware': 543,",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DEFAULT_REQUEST_HEADERS",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html\n#SPIDER_MIDDLEWARES = {\n#    'rei.middlewares.ReiSpiderMiddleware': 543,\n#}\n# Enable or disable downloader middlewares",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#SPIDER_MIDDLEWARES",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#SPIDER_MIDDLEWARES = {\n#    'rei.middlewares.ReiSpiderMiddleware': 543,\n#}\n# Enable or disable downloader middlewares\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html\n#DOWNLOADER_MIDDLEWARES = {\n#    'rei.middlewares.ReiDownloaderMiddleware': 543,\n#}\n# Enable or disable extensions\n# See https://docs.scrapy.org/en/latest/topics/extensions.html",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DOWNLOADER_MIDDLEWARES",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#DOWNLOADER_MIDDLEWARES = {\n#    'rei.middlewares.ReiDownloaderMiddleware': 543,\n#}\n# Enable or disable extensions\n# See https://docs.scrapy.org/en/latest/topics/extensions.html\n#EXTENSIONS = {\n#    'scrapy.extensions.telnet.TelnetConsole': None,\n#}\n# Configure item pipelines\n# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#EXTENSIONS",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#EXTENSIONS = {\n#    'scrapy.extensions.telnet.TelnetConsole': None,\n#}\n# Configure item pipelines\n# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html\n#ITEM_PIPELINES = {\n#    'rei.pipelines.ReiPipeline': 300,\n#}\n# Enable and configure the AutoThrottle extension (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/autothrottle.html",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#ITEM_PIPELINES",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#ITEM_PIPELINES = {\n#    'rei.pipelines.ReiPipeline': 300,\n#}\n# Enable and configure the AutoThrottle extension (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/autothrottle.html\n#AUTOTHROTTLE_ENABLED = True\n# The initial download delay\n#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_ENABLED",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#AUTOTHROTTLE_ENABLED = True\n# The initial download delay\n#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_START_DELAY",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_MAX_DELAY",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_TARGET_CONCURRENCY",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_DEBUG",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_ENABLED",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_EXPIRATION_SECS",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_DIR",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_IGNORE_HTTP_CODES",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_STORAGE",
+        "kind": 5,
+        "importPath": "rei.settings",
+        "description": "rei.settings",
+        "peekOfCode": "#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "rei.settings",
+        "documentation": {}
+    }
+]
